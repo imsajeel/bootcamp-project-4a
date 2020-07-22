@@ -1,38 +1,170 @@
-.App {
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(98, 138, 174, 1) 100%
+  );
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0.01px;
+}
+
+.buildings > img {
+  height: 50vh;
+}
+
+.grass {
+  background: rgb(147, 223, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(147, 223, 0, 1) 0%,
+    rgba(0, 177, 0, 1) 100%
+  );
+  height: 50px;
+  width: 100vw;
+}
+
+.grassTop {
+  height: 120px;
+}
+
+.road {
+  background-color: #333333;
+  height: 150px;
+  width: 100vw;
+  border-top: 10px solid rgb(255, 157, 0);
+  border-bottom: 10px solid rgb(255, 157, 0);
+}
+
+.sep {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  background-color: white;
+  height: 5px;
+  margin-right: 200px;
+}
+
+.car {
+  position: absolute;
+  bottom: 55px;
+  left: 40%;
+  z-index: 1000;
+  transform: translateX(-50%);
+}
+
+.car > img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.sun {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+.sun > img {
+  width: 120px;
+}
+
+.clouds {
+  position: absolute;
+  top: 10px;
+  z-index: 1000;
+}
+
+.clouds > img {
+  height: 20vh;
+}
+
+.bottomMenu {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  margin: auto;
+  width: 90vw;
+  max-width: 700px;
+  border-radius: 5px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  min-width: 100px;
+  background-color: rgb(255, 157, 0);
+  border: none;
+  padding: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0px 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover {
+  background-color: rgb(255, 174, 0);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button:active {
+  background-color: rgb(255, 208, 0);
+}
+
+button:focus {
+  outline: none;
+}
+
+.popUp {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 2000;
+  display: none;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.btClose {
+  min-width: 30px;
+  min-height: 30px;
+  font-size: 1.2em;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+}
+
+#contLocation,
+#contTime {
+  display: none;
+}
+
+.topMessage {
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 10px 30px;
+  position: relative;
+  width: 40%;
+  max-width: 250px;
+  border-radius: 0px 20px 20px 0px;
 }
